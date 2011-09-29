@@ -1,5 +1,5 @@
 function stv_app_name {
-	echo $PWD | sed -n 's/.*phpapps\/\([^/]*\)\.stv\.tv/\1/p'
+	echo $PWD | sed -n 's/.*phpapps\/\([^/]*\)\.stv\.tv.*/\1/p'
 }
 
 function stv_prompt {
