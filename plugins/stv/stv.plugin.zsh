@@ -1,5 +1,10 @@
 function stv_app_name {
-	echo $PWD | sed -n 's/.*phpapps\/\([^/]*\)\.stv\.tv.*/\1/p'
+	echo $PWD | grep 'globals_codeigniter' > /dev/null
+	if [ $? -eq 0 ]; then
+		echo globals
+	else
+		echo $PWD | sed -n 's/.*phpapps\/\([^/]*\)\.stv\.tv.*/\1/p'
+	fi
 }
 
 function stv_prompt {
