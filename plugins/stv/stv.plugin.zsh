@@ -3,7 +3,7 @@ function stv_app_name {
 	if [ $? -eq 0 ]; then
 		echo globals
 	else
-		echo $PWD | sed -n 's/.*phpapps\/\([^/]*\)\.stv\.tv.*/\1/p'
+		echo $PWD | sed -E -n 's/.*(:?Sites|phpapps)\/([^/]*)\.stv\.tv.*/\2/p'
 	fi
 }
 
